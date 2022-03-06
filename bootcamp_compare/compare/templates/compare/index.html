@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compare Coding Bootcamps</title>
+        <meta name="Compare which Coding Bootcamp is best" content="A useful tool to help aspiring students to compare coding bootcamps, in order to more effectively choose which bootcamp they would like to attend.">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit-icons.min.js"></script>
+
+        <script type="text/JavaScript">
+            function killCopy(e){
+            return false
+            }
+            function reEnable(){
+            return true
+            }
+            document.onselectstart=new Function ("return false")
+            if (window.sidebar){
+            document.onmousedown=killCopy
+            document.onclick=reEnable
+            }
+            </script> 
+
+<!-- <script data-ad-client="ca-pub-7280963326447555" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+
+
+<style>
+
+    @media only screen and (max-width: 600px) {
+
+.dTH{
+display:none;
+visibility: hidden;
+}
+
+}
+
+@media only screen and (min-width: 768px) {
+  .dM {
+    display: none;
+  }
+}
+
+
+
+</style>
+    </head>
+    <body>
+<div >
+
+    <div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 250">
+<div style="padding: 1%;" class="uk-background-primary"><h1 style="color:white;">CompareCamps<button style="color:white; float:right; padding:-5%;" class="uk-width-1-4 uk-height-1-1 uk-button uk-button-text uk-button-small" uk-toggle="target: #job" type="button"><p class="uk-text-small uk-text-center">Will I get a job?</p></button></h1>
+<!-- This is a button toggling the modal -->
+
+
+<div id="modal-sections" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Exciting Upcoming Features</h2>
+        </div>
+        <div class="uk-modal-body">
+           <ul>
+                <li>Sorting by attribute</li>
+                <li>Saving the order of the page</li>
+                <li>Page where users can add their own information based on experience</li>
+                <li>Adding location to the table nicely</li>
+                <li>Adding a place where users can comment on their experience with bootcamp</li>
+                <li>Beautifying the app, and adding banners, images, and logos</li>
+                <li>Make the app more mobile responsive</li>
+           </ul>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-primary uk-modal-close" type="button">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- This is the modal -->
+<div id="job" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Will I get a job after graduating from a bootcamp?</h2>
+        <ul>
+            <li>Network and resources — If you’re attending a bootcamp in hope of changing careers, then you should find out what services are offered. Some bootcamps set up prospective interviews with potential employers, while others offer resume workshops and provide a list of hiring partners.</li>
+            <li>Job Placement —  Consider a bootcamp’s job placement rate 30, 60, 90 and 120 days after the program. While some schools like App Academy SF only require you to pay if you get a job, most bootcamps don’t follow this model. Some bootcamps provide this information publicly via an industry organization called CIRR, while others may require some digging on Course Report.  </li>
+           <br>
+            <li>Before applying to the bootcamp, do your homework:    </li>
+            <ul>
+            <li>Read about coding bootcamps and visit their website.</li>
+            <li>If you can't find a Student Outcomes Report easily, ask the school to provide one (along with their methodology)</li>
+            <li>Read programming bootcamp questions on Quora to read answers from bootcamps</li>
+            <li>Read bootcamp reviews and interviews with Alumni</li>
+            <li>Visit the bootcamp space and talk to an instructor if possible</li></ul>
+            
+           <li> Where can I go with my bootcamp education?</li>
+            <ul>
+            <li>Get a job as a junior developer at a large company you've always admired.</li>
+            <li>Join a small dev team at a startup.</li>
+            <li>Take an apprenticeship and learn from the masters for a few months after graduating.</li>
+            <li>Become a technical co-founder and help launch a product.</li>
+            <li>Freelance while you travel the world.</li>
+            <li>Work for another coding bootcamp as an instructor, teaching assistant, or support staff.</li>
+            <li>Find a job as a technical product manager.</li>
+            <li>Take on new projects at your current company (and get a promotion or a raise while you're at it)!</li>
+            </ul>
+        </ul>
+        <button class="uk-button uk-button-primary uk-modal-close" type="button">Close</button>
+    </div>
+</div>
+</div>
+
+<div class="uk-overflow-auto dTH" style="margin-left: 1%; height:75%">
+
+    <table style="table-layout:fixed;" class="uk-table uk-table-responsive">
+        <th>Bootcamp:</th>                      
+        <th>Approx Cost:</th>
+        <th>Length:</th>
+        <th>Languages:</th>
+        <th>Enrollment Type:</th>
+        <th>Employment Rate:</th>
+        <th>Internship:</th>
+        <th>Info Updated:</th>
+        <th>Locations/Description:</th>
+    </table>
+    </div>
+</div>
+
+<div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
+    <div>
+
+    <ul class="uk-grid-small uk-child-width-1-1 uk-child-width-1-1@s" uk-sortable="handle: .uk-sortable-handle" uk-grid>
+
+{% for camp in camps %}
+ <!-- One Row -->
+<div class="uk-animation-toggle" tabindex="0" >
+    <li class='uk-animation-fade'>            
+    <table style="table-layout:fixed;" class="uk-table uk-table-hover uk-table-divider uk-table-responsive">
+       <tbody>
+           <tr>
+               <td><span class="uk-sortable-handle uk-margin-small-right uk-text-center" uk-icon="icon: table"></span>
+               <b><span class="dM"><br>Bootcamp: </span></b>{{camp.name}}</td>
+               <td><b><span class="dM">Approx Cost: </span></b>{{camp.cost}}</td>
+               <td><b><span class="dM">Length: </span></b>{{camp.length}}</td>
+               <td><b><span class="dM">Languages: </span></b>{{camp.languages}}</td>
+               <td><b><span class="dM">Enrollment Type: </span></b>{{camp.etype}}</td>
+               <td><b><span class="dM">Employment Rate: </span></b>{{camp.erate}}</td>
+               <td><b><span class="dM">Internship: </span></b>{{camp.internship}}</td>
+               <td><b><span class="dM">Info Updated: </span></b>{{camp.date_updated}}</td>
+               <td><b><span class="dM">Locations/Description: </span></b>        <button class="uk-button uk-button-primary" type="button" uk-toggle="target: #toggle-usage{{camp.id}}">Read More</button> </td>
+           </tr>
+       </tbody>  
+   </table>
+   <p class="uk-width-2-3 uk-margin-large-left" id="toggle-usage{{camp.id}}" hidden>{{camp.loc}} <br><br> {{camp.desc}} </p>
+       </li>
+    </div>
+<!-- One Row End -->
+{% endfor %}
+
+</div>
+</ul>
+</div>
+</div>    
+</div>     
+</div>
+
+<form class="dM" action="https://www.paypal.com/donate" method="post" target="_top">
+    <input type="hidden" name="business" value="WA65ZXXDW4DJS" />
+    <input type="hidden" name="no_recurring" value="0" />
+    <input type="hidden" name="item_name" value="I'm glad I helped you to decide which bootcamp is best for you! Thank you so much for your donation to better this useful tool!" />
+    <input type="hidden" name="currency_code" value="USD" />
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+    </form>   
+
+</body>
+<div style="padding:2%; position:fixed;bottom: 0;left:0;right: 0;" class="uk-background-primary">
+<a style="color:white;" class="uk-button uk-button-text uk-position-center" href="#modal-sections" uk-toggle>Upcoming Features</a>
+<form class="dTH" action="https://www.paypal.com/donate" method="post" target="_top">
+    <input type="hidden" name="business" value="WA65ZXXDW4DJS" />
+    <input type="hidden" name="no_recurring" value="0" />
+    <input type="hidden" name="item_name" value="I'm glad I helped you to decide which bootcamp is best for you! Thank you so much for your donation to better this useful tool!" />
+    <input type="hidden" name="currency_code" value="USD" />
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+    </form>    
+</div>
+</html>
